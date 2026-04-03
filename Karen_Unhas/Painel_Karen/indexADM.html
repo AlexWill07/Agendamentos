@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Painel - Karen Unhas</title>
+  <link rel="stylesheet" href="ADM.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">
+      <div>
+        <h1>Painel do Salão</h1>
+        <div class="muted">Confirme ou cancele pedidos (pendentes). Confirmados bloqueiam a agenda.</div>
+      </div>
+      <div class="row">
+        <input type="date" id="filtroData" />
+        <button class="btn out" id="btnRecarregar">Recarregar</button>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="pendentes">
+        Pendentes <span class="pill" id="countPendentes">0</span>
+      </button>
+      <button class="tab-btn" data-tab="confirmados">
+        Confirmados <span class="pill" id="countConfirmados">0</span>
+      </button>
+      <button class="tab-btn" data-tab="cancelados">
+        Cancelados <span class="pill" id="countCancelados">0</span>
+      </button>
+    </div>
+
+    <div class="tab-panels">
+      <section class="tab-panel active" id="tab-pendentes">
+        <div id="listaPendentes"></div>
+      </section>
+
+      <section class="tab-panel" id="tab-confirmados">
+        <div id="listaConfirmados"></div>
+      </section>
+
+      <section class="tab-panel" id="tab-cancelados">
+        <div id="listaCancelados"></div>
+      </section>
+    </div>
+  </div>
+
+
+  
+  <script type="module" src="admin.js"></script>
+</body>
+
+</html>

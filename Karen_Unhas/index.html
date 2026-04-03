@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Karen Unhas</title>
+</head>
+
+<body>
+
+
+    <h1> Agende Já Seu Horario! </h1>
+    <form id="form-agendamento">
+
+        <p> Digite seu Nome: </p>
+        <input type="text" id="nome" required>
+
+        <p>Digite seu Número:</p>
+        <input type="tel" id="telefone" required>
+
+        <p> Qual Data:</p>
+        <input type="date" id="data" required>
+
+        <p id="aviso-data" class="aviso"></p>
+
+
+        <label for="horario"> Qual Horário</label>
+        <select id="horario" required>
+            <option value="">Selecione um horário</option>
+            <option>08:00</option>
+            <option>09:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>13:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+            <option>16:00</option>
+            <option>17:00</option>
+            <option>18:00</option>
+            <option>19:00</option>
+            <option>20:00</option>
+        </select>
+
+
+
+        <p id="aviso-horario" style="display:none; color:red; font-weight:bold;">
+            Esse serviço precisa de horários consecutivos livres.
+        </p>
+
+
+
+
+        <p> Escolha seu Serviço:</p>
+        <select id="servico">
+            <option value="1"> Mão (1h) </option>
+            <option value="1"> Pé (1h)</option>
+            <option value="2"> Mão e Pé (2h) </option>
+        </select>
+
+        <p>
+            <button type="submit"> Confirmar Presença </button>
+        </p>
+
+        <p class="aviso-whatsapp">
+            O horário só será confirmado após resposta no WhatsApp.
+        </p>
+
+    </form>
+
+   
+    
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

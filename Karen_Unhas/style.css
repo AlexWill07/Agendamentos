@@ -1,0 +1,102 @@
+body {
+  background-color: rgb(240, 179, 233);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #5c2b5c;
+}
+
+form {
+  background-color: aliceblue;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: aparecer 0.5s ease forwards;
+}
+
+form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+p {
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 105%;
+  color: #333; 
+}
+
+
+input,
+select {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;         
+  color: #333;               
+  background-color: #fff;   
+}
+
+input::placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #d97ccc;
+  box-shadow: 0 0 0 3px rgba(217, 124, 204, 0.2);
+}
+
+
+button {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #e89adf;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #d97ccc;
+}
+
+.aviso-whatsapp {
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.aviso {
+  color: #c0392b;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

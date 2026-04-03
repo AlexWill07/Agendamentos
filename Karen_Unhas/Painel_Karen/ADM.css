@@ -1,0 +1,264 @@
+/* ===== Painel ADM no estilo do agendamento ===== */
+body{
+  background-color: rgb(240, 179, 233);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.container{
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 0 14px;
+}
+
+/* Card principal igual ao form */
+.top{
+  background-color: aliceblue;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+  animation: aparecer 0.5s ease forwards;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.top h1{
+  margin: 0 0 6px 0;
+  text-align: center;
+  color: #5c2b5c;
+  font-size: 28px;
+}
+
+.muted{
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.row{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.row input[type="date"]{
+  flex: 1;
+  min-width: 170px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+}
+
+.row input[type="date"]:focus{
+  outline: none;
+  border-color: #d97ccc;
+  box-shadow: 0 0 0 3px rgba(217,124,204,0.2);
+}
+
+.btn{
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn.out{
+  background-color: #e89adf;
+  color: #fff;
+}
+
+.btn.out:hover{
+  background-color: #d97ccc;
+}
+
+/* Separador */
+.hr{
+  height: 1px;
+  background: rgba(0,0,0,0.08);
+  margin: 16px 0;
+}
+
+/* Títulos das seções */
+h2{
+  margin: 18px 0 10px;
+  font-size: 18px;
+  color: #5c2b5c;
+}
+
+/* Listas */
+#listaPendentes, #listaConfirmados, #listaCancelados{
+  display: grid;
+  gap: 10px;
+}
+
+/* Card de cada agendamento (claro) */
+.card-agendamento{
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.card-agendamento .linha{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Chips */
+.chip{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f6e6f3;
+  border: 1px solid #eed3ea;
+  color: #5c2b5c;
+  font-size: 13px;
+}
+
+/* Status */
+.badge{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.badge.pendente{
+  background: #fff3cd;
+  color: #856404;
+}
+.badge.confirmado{
+  background: #d4edda;
+  color: #155724;
+}
+.badge.cancelado{
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Botões de ação */
+.acoes{
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-confirmar, .btn-cancelar{
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-confirmar{
+  background: #3ddc84;
+  color: #0b3b22;
+}
+
+.btn-cancelar{
+  background: #ff5d5d;
+  color: #fff;
+}
+
+.btn-confirmar:hover{ filter: brightness(1.05); }
+.btn-cancelar:hover{ filter: brightness(1.05); }
+
+
+@media (min-width: 720px){
+  .container{ max-width: 900px; }
+  #listaPendentes, #listaConfirmados, #listaCancelados{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.tabs{
+  display: flex;
+  gap: 10px;
+  margin: 14px 0 12px;
+  flex-wrap: wrap;
+}
+
+.tab-btn{
+  appearance: none;
+  border: 1px solid #e7c6e5;
+  background: #ffffff;
+  color: #5c2b5c;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform .08s ease, filter .2s ease, background .2s ease;
+}
+
+.tab-btn:hover{
+  filter: brightness(1.02);
+}
+
+.tab-btn:active{
+  transform: scale(.98);
+}
+
+.tab-btn.active{
+  background: #e89adf;
+  border-color: #d97ccc;
+  color: #ffffff;
+}
+
+
+.pill{
+  min-width: 24px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 900;
+  background: #f6e6f3;
+  color: #5c2b5c;
+}
+
+.tab-btn.active .pill{
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+
+.tab-panel{ display: none; }
+.tab-panel.active{ display: block; }
+
+.tab-btn, .pill{
+  pointer-events: auto;
+}
+
+.pill{
+  pointer-events: none; /* número não “rouba” o clique */
+}
